@@ -1,0 +1,58 @@
+{
+    "expo": {
+          "name": "CJR Performance",
+          "slug": "cjr-performance",
+          "version": "1.0.0",
+          "orientation": "portrait",
+          "icon": "./assets/icon.png",
+          "userInterfaceStyle": "light",
+          "splash": {
+                  "image": "./assets/splash.png",
+                  "resizeMode": "contain",
+                  "backgroundColor": "#ffffff"
+          },
+          "assetBundlePatterns": [
+                  "**/*"
+          ],
+          "ios": {
+                  "supportsTabletMode": true,
+                  "bundleIdentifier": "com.42speedsports.cjr",
+                  "buildNumber": "1",
+                  "infoPlist": {
+                            "NSCameraUsageDescription": "This app needs camera access to capture vehicle data",
+                            "NSPhotoLibraryUsageDescription": "This app needs photo library access to save images"
+                  }
+          },
+          "android": {
+                  "adaptiveIcon": {
+                            "foregroundImage": "./assets/adaptive-icon.png",
+                            "backgroundColor": "#ffffff"
+                  },
+                  "package": "com.speedsports42.cjr",
+                  "versionCode": 1,
+                  "permissions": [
+                            "CAMERA",
+                            "READ_EXTERNAL_STORAGE",
+                            "WRITE_EXTERNAL_STORAGE",
+                            "INTERNET"
+                  ]
+          },
+          "web": {
+                  "favicon": "./assets/favicon.png"
+          },
+          "plugins": [
+                  [
+                            "expo-camera",
+                            {
+                                        "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+                            }
+                  ]
+          ],
+          "extra": {
+                  "eas": {
+                            "projectId": "YOUR_EAS_PROJECT_ID"
+                  },
+                  "apiUrl": "https://api.42speedsports.com"
+          }
+    }
+}
